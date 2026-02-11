@@ -2,10 +2,10 @@
 
 ## Overview
 
-The SteuerEx Benchmark is an evaluation framework for assessing language model performance on German tax law questions. This benchmark uses a rigorous bootstrap-based evaluation methodology to ensure reliable and reproducible results.
+The SteuerEx Benchmark is an evaluation framework for assessing language model performance on German tax law questions. This benchmark uses a rigorous bootstrap-based evaluation methodology to ensure reliable and reproducible results. This benchmark is based on the SteuerLLM paper (SteuerLLM: Local specialized large language model for German tax law analysis).
 
 **Official Server**: https://steuerllm.i5.ai.fau.de/benchmark
-
+**SeuerLLM Demo**: https://steuerllm.i5.ai.fau.de
 ## Dataset
 
 The benchmark consists of **115 questions** covering various aspects of German tax law. All questions are evaluated using the same bootstrap methodology used in the original paper.
@@ -286,15 +286,6 @@ https://steuerllm.i5.ai.fau.de/benchmark/leaderboard_page
 ## License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-You are free to:
-- **Share** -- copy and redistribute the material in any medium or format
-- **Adapt** -- remix, transform, and build upon the material
-
-Under the following terms:
-- **Attribution** -- You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-- **NonCommercial** -- You may not use the material for commercial purposes.
-- **ShareAlike** -- If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
 
 ## Contact
 
