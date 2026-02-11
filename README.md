@@ -268,12 +268,11 @@ If you encounter issues:
 If you use this benchmark in your research, please cite:
 
 ```bibtex
-@misc{steuerex2025,
-  title={SteuerEx: A Bootstrap-Evaluated Benchmark for German Tax Law},
-  author={[Author Names]},
-  year={2025},
-  url={https://steuerllm.i5.ai.fau.de/benchmark},
-  note={Bootstrap methodology: seed=42, B=1000, target=1035.5 points}
+@article{steuerllm,
+  author = {Wind, Sebastian and Sopa, Jeta and Schmid, Laurin and Jackl, Quirin and Kiefer, Sebastian and Wu, Fei and Mayr, Martin and Köstler, Harald and Wellein, Gerhard and Maier, Andreas and Tayebi Arasteh, Soroosh},
+  title = {SteuerLLM: Local specialized large language model for German tax law analysis},
+  year = {2026},
+  journal = {arxiv preprint}
 }
 ```
 
@@ -286,14 +285,23 @@ https://steuerllm.i5.ai.fau.de/benchmark/leaderboard_page
 
 ## License
 
-[Specify your license here]
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+You are free to:
+- **Share** -- copy and redistribute the material in any medium or format
+- **Adapt** -- remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** -- You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+- **NonCommercial** -- You may not use the material for commercial purposes.
+- **ShareAlike** -- If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
 
 ## Contact
 
-For questions or issues, please contact: [Your contact information]
+For questions or issues, please contact: sebastian.wind@fau.de
 
 ---
 
 **Version**: 1.0  
-**Last Updated**: January 2025  
+**Last Updated**: February 2026  
 **Benchmark Questions**: 115 total
