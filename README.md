@@ -311,10 +311,6 @@ https://steuerllm.i5.ai.fau.de/benchmark/leaderboard_page
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-## Contact
-
-For questions or issues, please contact: sebastian.wind@fau.de
-
 ---
 
 **Version**: 1.0  
