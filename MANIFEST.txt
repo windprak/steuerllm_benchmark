@@ -1,0 +1,54 @@
+GerTaxLaw Benchmark - Client Package
+=====================================
+
+This package contains everything needed to run the full GerTaxLaw benchmark
+and submit results for evaluation using the exact bootstrap methodology (seed=42, B=1000)
+from the published paper.
+
+Contents:
+---------
+
+README.md                          Complete participant guide
+QUICKSTART.md                      5-step quick start
+MANIFEST.txt                       This file
+
+client/
+  ├── requirements.txt             Python dependencies
+  ├── generate_predictions.py      Generate answers for all 115 questions
+  └── submit_predictions.py        Submit predictions to server
+
+benchmark-questions.json           All 115 questions (no reference answers)
+
+Workflow:
+---------
+1. Review all 115 questions in benchmark-questions.json
+2. Implement your model in client/generate_predictions.py
+3. Run: cd client && python generate_predictions.py
+4. Submit: python submit_predictions.py predictions.json -m "YourModel"
+
+Key Points:
+-----------
+- ALL 115 questions are evaluated (no train/test split)
+- Evaluation uses exact bootstrap indices from paper (seed=42, B=1000, target=1035.5)
+- Results include mean, std, and 95% confidence intervals
+- One submission per IP address
+- Bootstrap methodology ensures fair comparison to paper results
+
+Questions by Category:
+---------------------
+- Einkommensteuer: ~35 questions
+- Körperschaftsteuer: ~20 questions  
+- Umsatzsteuer: ~18 questions
+- Gewerbesteuer: ~12 questions
+- Abgabenordnung: ~15 questions
+- Erbschaftsteuer: ~5 questions
+- Other categories: ~10 questions
+
+Total Points: 1,035.5 across all 115 questions
+
+Support:
+--------
+For questions, contact: [Your contact]
+
+Version: 1.0
+Date: January 2025
