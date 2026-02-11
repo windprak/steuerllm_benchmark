@@ -43,7 +43,7 @@ The benchmark consists of **115 questions** covering various aspects of German t
 3. **Server-Side Evaluation**: On the server, each answer is compared against gold-standard reference statements. An LLM judge (`gpt-4o-2024-08-06`) evaluates how well each answer matches the reference, awarding partial or full points per statement.
 4. **Bootstrap Scoring**: Points are aggregated and bootstrap resampling (B=1000, seed=42) computes the final score with confidence intervals.
 
-![SteuerEx Benchmark Answering and Evaluation](Figure_SteuerEx.png)
+![SteuerEx Benchmark Answering and Evaluation](figures/Figure_SteuerEx.png)
 
 ### Data Format
 
