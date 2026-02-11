@@ -1,5 +1,7 @@
 # SteuerEx Benchmark - Participant Guide
 
+![SteuerEx Benchmark Answering and Evaluation](Figure_SteuerEx.png)
+
 ## Overview
 
 The SteuerEx Benchmark is an evaluation framework for assessing language model performance on German tax law questions. This benchmark uses a rigorous bootstrap-based evaluation methodology to ensure reliable and reproducible results. This benchmark is based on the SteuerLLM paper (SteuerLLM: Local specialized large language model for German tax law analysis).
