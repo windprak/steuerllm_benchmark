@@ -7,20 +7,12 @@ The SteuerEx Benchmark is an evaluation framework for assessing language model p
 **Official Server**: https://steuerllm.i5.ai.fau.de/benchmark
 **SeuerLLM Demo**: https://steuerllm.i5.ai.fau.de
 
-## How it works
-
-1. **Generate Answers**: Participants generate answers to all 115 German tax law questions using their model.
-2. **Upload Predictions**: The predictions are submitted to the SteuerEx server as a JSON file.
-3. **Server-Side Evaluation**: On the server, each answer is compared against gold-standard reference statements. An LLM judge (`gpt-4o-2024-08-06`) evaluates how well each answer matches the reference, awarding partial or full points per statement.
-4. **Bootstrap Scoring**: Points are aggregated and bootstrap resampling (B=1000, seed=42) computes the final score with confidence intervals.
-
-![SteuerEx Benchmark Answering and Evaluation](Figure_SteuerEx.png)
-
 ## Dataset
 
 The benchmark consists of **115 questions** covering various aspects of German tax law. All questions are evaluated using the same bootstrap methodology used in the original paper.
 
-### Question Categories
+<details>
+<summary><strong>Question Categories (click to expand)</strong></summary>
 
 | Category | Exam Name | Subtopic (German) | Subtopic (English) | Questions [n] | Max. Points |
 |---|---|---|---|---|---|
@@ -48,6 +40,17 @@ The benchmark consists of **115 questions** covering various aspects of German t
 | Tax procedural law (Abgabenordnung) | AO | Abgabenordnung | Tax procedural law | 3 | 129.0 |
 | Tax procedural law (Abgabenordnung) | GrdStR WS23/24 | Abgabenordnung | Tax procedural law | 18 | 69.0 |
 | Value-added tax (Umsatzsteuer) | USt | Umsatzsteuer | Value-added tax | 4 | 121.0 |
+
+</details>
+
+## How it works
+
+1. **Generate Answers**: Participants generate answers to all 115 German tax law questions using their model.
+2. **Upload Predictions**: The predictions are submitted to the SteuerEx server as a JSON file.
+3. **Server-Side Evaluation**: On the server, each answer is compared against gold-standard reference statements. An LLM judge (`gpt-4o-2024-08-06`) evaluates how well each answer matches the reference, awarding partial or full points per statement.
+4. **Bootstrap Scoring**: Points are aggregated and bootstrap resampling (B=1000, seed=42) computes the final score with confidence intervals.
+
+![SteuerEx Benchmark Answering and Evaluation](Figure_SteuerEx.png)
 
 ### Data Format
 
