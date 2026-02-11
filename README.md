@@ -45,7 +45,7 @@ The benchmark consists of **115 questions** covering various aspects of German t
 
 ## How it works
 
-1. **Generate Answers**: Participants generate answers to all 115 German tax law questions using their model.
+1. **Generate Answers**: Participants generate answers to 115 German tax law questions using their model.
 2. **Upload Predictions**: The predictions are submitted to the SteuerEx server as a JSON file.
 3. **Server-Side Evaluation**: On the server, each answer is compared against gold-standard reference statements. An LLM judge (`gpt-4o-2024-08-06`) evaluates how well each answer matches the reference, awarding partial or full points per statement.
 4. **Bootstrap Scoring**: Points are aggregated and bootstrap resampling (B=1000, seed=42) computes the final score with confidence intervals.
