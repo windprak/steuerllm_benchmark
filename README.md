@@ -12,14 +12,32 @@ The benchmark consists of **115 questions** covering various aspects of German t
 
 ### Question Categories
 
-- Einkommensteuer (Income Tax)
-- Körperschaftsteuer (Corporate Tax)
-- Umsatzsteuer (VAT)
-- Gewerbesteuer (Trade Tax)
-- Abgabenordnung (Tax Code)
-- Erbschaftsteuer (Inheritance Tax)
-- Umwandlungssteuer (Transformation Tax)
-- Besteuerung von Personengesellschaften (Partnership Taxation)
+| Category | Exam Name | Subtopic (German) | Subtopic (English) | Questions [n] | Max. Points |
+|---|---|---|---|---|---|
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS18 | Gewerbesteuer | Trade tax | 1 | 12.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS18 | Körperschaftsteuer | Corporate income tax | 4 | 36.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS18 | Umwandlungssteuer | Reorganization tax | 2 | 6.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS19 | Gewerbesteuer | Trade tax | 1 | 13.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS19 | Körperschaftsteuer | Corporate income tax | 6 | 34.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS19 | Umwandlungssteuer | Reorganization tax | 1 | 6.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS20 | Gewerbesteuer | Trade tax | 1 | 19.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS20 | Körperschaftsteuer | Corporate income tax | 4 | 30.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS20 | Umwandlungssteuer | Reorganization tax | 1 | 7.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS22 | Gewerbesteuer | Trade tax | 1 | 10.5 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS22 | Körperschaftsteuer | Corporate income tax | 10 | 36.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS22 | Umwandlungssteuer | Reorganization tax | 3 | 6.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS23 | Körperschaftsteuer | Corporate income tax | 4 | 20.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS23 | Körperschaft- & Gewerbesteuer | Corporate & trade tax | 3 | 24.0 |
+| Corporate tax (Unternehmensbesteuerung) | UnternehmenSt SS23 | Umwandlungssteuer | Reorganization tax | 1 | 2.0 |
+| Fundamentals of tax law (Grundlagen des Steuerrechts) | GrdStR WS23/24 | Internationales Steuerrecht | International tax law | 1 | 7.0 |
+| Fundamentals of tax law (Grundlagen des Steuerrechts) | GrdStR WS23/24 | Umsatzsteuer | Value-added tax | 17 | 76.5 |
+| Fundamentals of tax law (Grundlagen des Steuerrechts) | GrdStR WS23/24 | Einkommensteuer | Income tax | 18 | 111.5 |
+| Fundamentals of tax law (Grundlagen des Steuerrechts) | GrdStR WS23/24 | Erbschaftsteuer | Inheritance tax | 2 | 5.0 |
+| Income tax (Einkommensteuer) | EStR | Einkommensteuer | Income tax | 4 | 189.0 |
+| Income tax (Einkommensteuer) | PersG | Besteuerung von Personengesellschaften | Partnership taxation | 4 | 66.0 |
+| Tax procedural law (Abgabenordnung) | AO | Abgabenordnung | Tax procedural law | 3 | 129.0 |
+| Tax procedural law (Abgabenordnung) | GrdStR WS23/24 | Abgabenordnung | Tax procedural law | 18 | 69.0 |
+| Value-added tax (Umsatzsteuer) | USt | Umsatzsteuer | Value-added tax | 4 | 121.0 |
 
 ### Data Format
 
