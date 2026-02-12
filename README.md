@@ -10,7 +10,7 @@ The SteuerEx Benchmark is an evaluation framework for assessing language model p
 ## Dataset
 
 The benchmark consists of **115 questions** covering various aspects of German tax law. All questions are evaluated using the same bootstrap methodology used in the original paper.
-
+https://huggingface.co/datasets/windprak/SteuerEx
 <details>
 <summary><strong>Question Categories (click to expand)</strong></summary>
 
