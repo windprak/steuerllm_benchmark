@@ -324,6 +324,8 @@ If you encounter issues:
 
 > **Read carefully before submitting.**
 
+> We previously used a shared API key for evaluation, but exhausted our funds due to the high number of submissions. Evaluation is therefore now performed using your own OpenAI API key.
+
 - **Use a restricted, dedicated API key.** Create a new key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys) with a spending limit sized for this benchmark (~$3–$12 USD per submission). The key must have access to **gpt-4o** (requires a paid OpenAI account with gpt-4o enabled). **Never use your primary or unrestricted API key.**
 
 - **Key not persisted.** Your OpenAI API key is held in server memory solely for the duration of the evaluation and is never written to disk, logs, or any database. However, no server can guarantee absolute security against all possible threats.
