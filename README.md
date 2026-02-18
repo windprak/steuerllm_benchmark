@@ -151,7 +151,23 @@ python submit_predictions.py predictions.json \
 - `--openai-key` / `-o`: Your OpenAI API key (required) — used for GPT-4o evaluation, not stored on the server
 - `--server` / `-s`: Server URL (default: `https://steuerllm.i5.ai.fau.de/benchmark`)
 
-> **Note**: You need an [OpenAI API key](https://platform.openai.com/api-keys) with access to `gpt-4o`. The key is used solely to run the evaluation on your submission and is never stored. Evaluation costs are typically a few USD per submission.
+> **Note**: You need an [OpenAI API key](https://platform.openai.com/api-keys) with access to `gpt-4o`. The key is used solely to run the GPT-4o evaluation on your submission and is never written to disk or logs. See the [Disclaimer & API Key Policy](#disclaimer--api-key-policy) below before submitting.
+
+### Evaluation Cost
+
+Evaluation uses GPT-4o to score each answer against reference statements. Typical costs per submission:
+
+| Answer length | Estimated cost |
+|---|---|
+| Short answers (~500 chars) | ~$3–$5 USD |
+| Medium answers (~2,000 chars) | ~$5–$8 USD |
+| Long/detailed answers (~5,000+ chars) | ~$8–$12 USD |
+
+**GPT-4o pricing**: $2.50 / 1M input tokens · $10.00 / 1M output tokens (752 statements evaluated per submission).
+
+The server returns a cost estimate immediately after your submission is accepted, before evaluation begins. This is an approximation; actual cost may vary ±20% depending on GPT-4o response length.
+
+> **Recommendation**: Set a [spending limit](https://platform.openai.com/settings/organization/limits) of $15 USD on your API key to cap worst-case costs.
 
 ### Submission Limits
 
@@ -283,6 +299,13 @@ Ensure your key has access to gpt-4o.
 Get a key at https://platform.openai.com/api-keys
 ```
 
+**Evaluation failed or timed out**
+```
+Unfortunately no re-evaluation or refund is provided for failed evaluations.
+See the Disclaimer section. You may resubmit with a new (different) predictions file
+if you have remaining submissions.
+```
+
 **Connection Error**
 ```
 Solution: Check server URL and network connection
@@ -296,6 +319,22 @@ If you encounter issues:
 2. Validate your JSON syntax
 3. Review error messages carefully
 4. Ensure all requirements are met
+
+## Disclaimer & API Key Policy
+
+> **Read carefully before submitting.**
+
+- **Use a restricted, dedicated API key.** Create a new key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys) with a spending limit sized for this benchmark (~$3–$12 USD per submission). **Never use your primary or unrestricted API key.**
+
+- **Key not persisted.** Your OpenAI API key is held in server memory solely for the duration of the evaluation and is never written to disk, logs, or any database. However, no server can guarantee absolute security against all possible threats.
+
+- **No liability for API charges.** The service provider accepts no responsibility whatsoever for any OpenAI API charges incurred, whether from normal evaluation, unexpected errors, retries, or any other cause.
+
+- **No liability for failed or incomplete evaluations.** Evaluations may fail, time out, or produce incorrect results due to OpenAI API errors, rate limits, server issues, or any other reason. We provide no guarantee of evaluation success, accuracy, or completeness. No refund or re-evaluation is guaranteed in any case.
+
+- **No liability for security incidents.** In the event of a server breach, compromise, or any other security incident, the service provider accepts no responsibility for any resulting unauthorized API usage, charges, or damages of any kind.
+
+- **By submitting, you explicitly accept all of the above risks and waive any claims against the service provider, FAU Erlangen-Nürnberg, and its contributors.**
 
 ## Citation
 
