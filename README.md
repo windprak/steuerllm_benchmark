@@ -40,7 +40,7 @@ https://huggingface.co/datasets/windprak/SteuerEx
 
 1. **Generate Answers**: Participants generate answers to 115 German tax law questions using their model.
 2. **Upload Predictions**: The predictions are submitted to the SteuerEx server as a JSON file.
-3. **Server-Side Evaluation**: On the server, each answer is compared against gold-standard reference statements. An LLM judge (`gpt-4o-2024-08-06`) evaluates how well each answer matches the reference, awarding partial or full points per statement.
+3. **Server-Side Evaluation**: On the server, each answer is compared against gold-standard reference statements. An LLM judge (`gpt-4o`) evaluates how well each answer matches the reference, awarding partial or full points per statement. Evaluation is performed using **your own OpenAI API key**, so you are only charged for your own submissions.
 4. **Bootstrap Scoring**: Points are aggregated and bootstrap resampling (B=1000, seed=42) computes the final score with confidence intervals.
 
 ![SteuerEx Benchmark Answering and Evaluation](figures/Figure_SteuerEx.png)
@@ -139,6 +139,7 @@ Your submission must be a JSON file mapping question IDs to answer strings:
 python submit_predictions.py predictions.json \
   --model "YourModelName-v1" \
   --key "GerTaxLaw2025" \
+  --openai-key "sk-..." \
   --server "https://steuerllm.i5.ai.fau.de/benchmark"
 ```
 
@@ -146,13 +147,15 @@ python submit_predictions.py predictions.json \
 
 - `predictions.json`: Path to your predictions file
 - `--model` / `-m`: Your model name (required)
-- `--key` / `-k`: Submission key (default: "GerTaxLaw2025")
-- `--server` / `-s`: Server URL (default: https://steuerllm.i5.ai.fau.de/benchmark)
+- `--key` / `-k`: Submission key (default: `GerTaxLaw2025`)
+- `--openai-key` / `-o`: Your OpenAI API key (required) — used for GPT-4o evaluation, not stored on the server
+- `--server` / `-s`: Server URL (default: `https://steuerllm.i5.ai.fau.de/benchmark`)
+
+> **Note**: You need an [OpenAI API key](https://platform.openai.com/api-keys) with access to `gpt-4o`. The key is used solely to run the evaluation on your submission and is never stored. Evaluation costs are typically a few USD per submission.
 
 ### Submission Limits
 
-- **One submission per IP address**
-- Choose your best model carefully
+- **5 submissions per IP address**
 - Results are final once submitted
 
 ## Evaluation Methodology
@@ -224,7 +227,7 @@ This creates `predictions.json` with all 115 answers.
 Submit your predictions once:
 
 ```bash
-python submit_predictions.py predictions.json -m "YourModel-v1"
+python submit_predictions.py predictions.json -m "YourModel-v1" -o "sk-..."
 ```
 
 ## Best Practices
@@ -268,9 +271,16 @@ Solution: Ensure all 115 question IDs are in your predictions.json
 Solution: All answers must be non-empty strings
 ```
 
-**Submission rejected: Key already used**
+**Submission rejected: Too many submissions**
 ```
-Solution: Only one submission per IP address is allowed
+Solution: Up to 5 submissions per IP address are allowed
+```
+
+**OpenAI API key validation failed**
+```
+Solution: Provide a valid OpenAI API key starting with 'sk-'.
+Ensure your key has access to gpt-4o.
+Get a key at https://platform.openai.com/api-keys
 ```
 
 **Connection Error**
@@ -314,6 +324,6 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 
 ---
 
-**Version**: 1.0  
+**Version**: 1.1  
 **Last Updated**: February 2026  
 **Benchmark Questions**: 115 total

@@ -36,7 +36,7 @@ def validate_predictions_file(filepath):
         print(f"❌ Error reading file: {e}")
         return None
 
-def submit_predictions(server_url, predictions_file, model_name, submission_key):
+def submit_predictions(server_url, predictions_file, model_name, submission_key, openai_key):
     """Submit predictions to the benchmark server."""
     
     # Validate predictions
@@ -55,7 +55,8 @@ def submit_predictions(server_url, predictions_file, model_name, submission_key)
             files = {'file': (Path(predictions_file).name, f, 'application/json')}
             data = {
                 'model_name': model_name,
-                'key': submission_key
+                'key': submission_key,
+                'openai_key': openai_key
             }
             
             response = requests.post(
@@ -194,8 +195,9 @@ The predictions.json file should contain:
     parser.add_argument('predictions_file', help='Path to predictions JSON file')
     parser.add_argument('-m', '--model', required=True, help='Model name')
     parser.add_argument('-k', '--key', default='GerTaxLaw2025', help='Submission key')
+    parser.add_argument('-o', '--openai-key', required=True, help='Your OpenAI API key (used for GPT-4o evaluation)')
     parser.add_argument('-s', '--server', default='https://steuerllm.i5.ai.fau.de/benchmark', 
-                       help='Server URL (default: http://localhost:5000)')
+                       help='Server URL (default: https://steuerllm.i5.ai.fau.de/benchmark)')
     
     args = parser.parse_args()
     
@@ -204,7 +206,8 @@ The predictions.json file should contain:
         args.server,
         args.predictions_file,
         args.model,
-        args.key
+        args.key,
+        args.openai_key
     )
     
     if success:
